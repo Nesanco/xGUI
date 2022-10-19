@@ -74,6 +74,7 @@ You can easily create animations by using the Animation constructor, then adding
         animation.newFrame(buildItem(Material.RED_WOOL, "&4Red Wool", ""));
         animation.newFrame(buildItem(Material.BLUE_WOOL, "&9Blue Wool", ""));
         animation.newFrame(buildItem(Material.GREEN_WOOL, "&2Green Wool", ""));
+        animation.setTime(20);
         
         gui.addAnimation(10, animation);
         animation.toggle();
