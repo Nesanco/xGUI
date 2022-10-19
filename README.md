@@ -42,3 +42,26 @@ There are currently 2 events you can use in your GUI
 
 ```gui.onClose(BukkitRunnable)``` Called when a player closes the GUI, use ``gui.getLastCloser()`` to get the person that closed the GUI
 
+# Buttons
+You can easily create buttons by using the Button constructor, then adding the button to the gui using ``gui.addButton(slot, button)`` you don't need to create a seperate constructor for the button, you could just do 
+```
+        gui.addButton(10, new Button(new BukkitRunnable() {
+            @Override
+            public void run() {
+                Bukkit.broadcastMessage("Hello!");
+            }
+        }));
+```
+
+# Animations
+You can easily create animations by using the Animation constructor, then adding the animation to the gui using ``gui.addAnimation(slot, button)``, the constructor allows you to easily customize the animation by adding new frames, setting the time of the frames, toggling, or playing the animation, and more, example:
+```
+        Animation animation = new Animation();
+        animation.newFrame(buildItem(Material.RED_WOOL, "&4Red Wool", ""));
+        animation.newFrame(buildItem(Material.BLUE_WOOL, "&9Blue Wool", ""));
+        animation.newFrame(buildItem(Material.GREEN_WOOL, "&2Green Wool", ""));
+        
+        gui.addAnimation(10, animation);
+        animation.toggle();
+```
+
