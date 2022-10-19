@@ -21,4 +21,4 @@ GUIs can be created by using ```GUI gui = new GUI("title", GUIType.TYPE, size);`
         gui.addFormat("$", buildItem(Material.RED_WOOL, "&4Red Wool", ""));
         gui.addFormat("%", buildItem(Material.BLUE_WOOL, "&9Blue Wool", ""));```
         
-        which would 
+which would 
