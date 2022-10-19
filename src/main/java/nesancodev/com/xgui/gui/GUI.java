@@ -2,6 +2,7 @@ package nesancodev.com.xgui.gui;
 
 import nesancodev.com.xgui.component.Animation;
 import nesancodev.com.xgui.component.Button;
+import nesancodev.com.xgui.component.groups.AnimationGroup;
 import nesancodev.com.xgui.enums.GUIType;
 import nesancodev.com.xgui.listeners.InventoryClickListener;
 import nesancodev.com.xgui.listeners.InventoryCloseListener;
@@ -242,6 +243,15 @@ public class GUI {
 
         animation.setSlot(slot);
         animation.setGUI(this);
+    }
+
+    public void addAnimation(AnimationGroup animationGroup) {
+        for (int i : animationGroup.getAnimationHashMap().keySet()) {
+            Animation animation = animationGroup.getAnimationHashMap().get(i);
+            animation.setGUI(this);
+
+            animationHashMap.put(i, animation);
+        }
     }
     // ### ** ### ### ** ###
 
