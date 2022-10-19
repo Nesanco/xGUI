@@ -15,11 +15,12 @@ GUIs can be created by using ```GUI gui = new GUI("title", GUIType.TYPE, size);`
                         "#%%%%%%%#" +
                         "#########";
                         
-        GUI gui = new GUI("test", GUIType.CHEST, 36);
         gui.content(conent);
         gui.addFormat("#", buildItem(Material.GRAY_STAINED_GLASS_PANE, " ", ""));
         gui.addFormat("$", buildItem(Material.RED_WOOL, "&4Red Wool", ""));
         gui.addFormat("%", buildItem(Material.BLUE_WOOL, "&9Blue Wool", ""));
 ```
         
-which would 
+which would look like:
+![image](https://user-images.githubusercontent.com/80917510/196790942-8371e4b0-7b3b-463c-ba87-752eb0dffbb9.png)
+
