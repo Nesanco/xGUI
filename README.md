@@ -22,5 +22,6 @@ GUIs can be created by using ```GUI gui = new GUI("title", GUIType.TYPE, size);`
 ```
         
 which would look like:
+
 ![image](https://user-images.githubusercontent.com/80917510/196790942-8371e4b0-7b3b-463c-ba87-752eb0dffbb9.png)
 
