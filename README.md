@@ -2,7 +2,21 @@
 This is a GUI library which makes creating GUIs easier, this has no use for server owners. The library currently features animations, buttons, events, extra methods, and more
 
 # Maven
-Adding in a few mins
+```
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+```
+
+```
+        <dependency>
+            <groupId>com.github.Nesanco</groupId>
+            <artifactId>xGUI</artifactId>
+            <version>1.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+```
 
 # Usage
 Begin by registering xGUI, use this method in your onEnable
