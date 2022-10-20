@@ -80,3 +80,21 @@ You can easily create animations by using the Animation constructor, then adding
         animation.toggle();
 ```
 
+You can also create animation groups which allow you to add multiple animations to a group, you will then be able to add frames to all of the animations in the group, toggle them, player them, set the time for them, etc, example:
+```
+        AnimationGroup g1 = new AnimationGroup();
+        g1.addAnimation(1, new Animation()); // 1 is the slot the animation will be played in
+        g1.addAnimation(2, new Animation()); // 2 is the slot the animation will be played in
+        g1.addAnimation(3, new Animation()); // 3 is the slot the animation will be played in
+
+        g1.newFrame(buildItem(Material.RED_WOOL, "&4Red", ""));
+        g1.newFrame(buildItem(Material.BLUE_WOOL, "&9Blue", ""));
+        g1.newFrame(buildItem(Material.YELLOW_WOOL, "&eYellow", ""));
+
+        gui.addAnimation(g1);
+
+        g1.toggle();
+```
+
+
+
