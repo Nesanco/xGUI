@@ -96,5 +96,11 @@ You can also create animation groups which allow you to add multiple animations 
         g1.toggle();
 ```
 
+# Utils
+You can easily create ItemStacks using the ItemBuilder class, example:
+```
+ItemBuilder.buildItem(Material.RED_WOOL, "&4Red Wool")
+```
+
 
 
