@@ -3,13 +3,14 @@ package nesancodev.com.xgui.gui;
 import nesancodev.com.xgui.component.Animation;
 import nesancodev.com.xgui.component.Button;
 import nesancodev.com.xgui.component.groups.AnimationGroup;
-import nesancodev.com.xgui.enums.GUIType;
 import nesancodev.com.xgui.listeners.InventoryClickListener;
 import nesancodev.com.xgui.listeners.InventoryCloseListener;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
+import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -21,7 +22,7 @@ public class GUI {
     // DEFAULTS
     private String title = "Title";
     private int size = 45;
-    private GUIType type = GUIType.CHEST;
+    private InventoryType type = InventoryType.CHEST;
     //
 
     // INVENTORY
@@ -53,7 +54,7 @@ public class GUI {
     //
 
     // ### ** ### CONSTRUCTORS ### ** ###
-    public GUI (String title, GUIType type, int size) {
+    public GUI (String title, InventoryType type, int size) {
         this.title = title;
         this.type = type;
         this.size = size;
@@ -63,7 +64,7 @@ public class GUI {
         guiHashMap.put(this.inventory, this);
     }
 
-    public GUI (String title, GUIType type) {
+    public GUI (String title, InventoryType type) {
         this.title = title;
         this.type = type;
 
@@ -148,7 +149,7 @@ public class GUI {
         inventory.clear();
     }
 
-    public GUIType getType() {
+    public InventoryType getType() {
         return type;
     }
 
@@ -187,6 +188,13 @@ public class GUI {
                 inventory.setItem(i, stack);
             }
         }
+    }
+    public ArrayList<Player> getViewers() {
+        ArrayList<Player> players = new ArrayList<>();
+        for (HumanEntity entity : inventory.getViewers()) {
+            players.add((Player) entity);
+        }
+        return players;
     }
 
     public HashMap<Integer, Button> getButtonHashMap() {
