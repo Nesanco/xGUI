@@ -13,7 +13,7 @@ This is a GUI library which makes creating GUIs easier, this has no use for serv
         <dependency>
             <groupId>com.github.Nesanco</groupId>
             <artifactId>xGUI</artifactId>
-            <version>1.0.0</version>
+            <version>VERSION</version>
             <scope>provided</scope>
         </dependency>
 ```
